@@ -1,0 +1,188 @@
+//1st PROGRAM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+var employees = new Array();
+
+employees.push({ name: "Manasa", age: 30, designation: "Manager" });
+employees.push({ name: "Ritika", age: 25, designation: "Developer" });
+employees.push({ name: "Aiswarya", age: 35, designation: "Designer" });
+employees.push({ name: "Navya", age: 28, designation: "Tester" });
+
+function displayEmployees(employees) {
+    for (var i = 0; i < employees.length; i++) {
+        document.write("Name: " + employees[i].name +"<br>");
+    }
+}
+
+function sortEmployeesByName(employees) {
+    for (var i = 0; i < employees.length - 1; i++) {
+        for (var j = i + 1; j < employees.length; j++) {
+            if (employees[i].name > employees[j].name) {
+    
+                var temp = employees[i];
+                employees[i] = employees[j];
+                employees[j] = temp;
+            }
+        }
+    }
+    return employees;
+}
+
+
+employees = sortEmployeesByName(employees);
+
+document.write("Employees sorted by name:"+"<br>");
+displayEmployees(employees);
+</script>
+<body>
+    
+</body>
+</html>
+
+2ND PROGRAM
+
+function cleanArray(array) {
+    return array.filter(function (element) {
+        return element !== null &&
+               element !== 0 &&
+               element !== "" &&
+               element !== false &&
+               element !== undefined &&
+               !isNaN(element);
+    });
+}
+
+var sampleArray = [NaN, 0, 15, false, -22, '', undefined, 47, null];
+
+var cleanedArray = cleanArray(sampleArray);
+console.log("Cleaned Array:", cleanedArray);
+
+3RD PROGRAM
+
+<html>
+<body>
+    <form>
+        <label for="textArea">Enter several lines of text:</label><br>
+        <textarea id="textArea" rows="4" cols="50"></textarea><br>
+        
+        <label for="searchChar">Enter search character:</label>
+        <input type="text" id="searchChar"><br>
+        
+        <button type="button" onclick="countOccurrences()">Search</button>
+    </form>
+
+    <script>
+        function countOccurrences() {
+            // Get the input text and search character
+            var text = document.getElementById("textArea").value;
+            var searchChar = document.getElementById("searchChar").value;
+
+            // Count occurrences of the search character in the text
+            var occurrences = 0;
+            for (var i = 0; i < text.length; i++) {
+                if (text.charAt(i) === searchChar) {
+                    occurrences++;
+                }
+            }
+
+            // Display the result
+            alert("Number of occurrences of '" + searchChar + "': " + occurrences);
+        }
+    </script>
+</body>
+</html>
+
+
+4TH PROGRAM
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function mOver(obj){
+    obj.style.backgroundColor= "yellow";
+}
+function mOut(obj){
+    obj.style.backgroundColor="aqua";
+}
+</script>
+
+<body>
+    <div onmouseover="mOver(this)" style="background-color:rgb(239, 186, 117);padding:40px;" onmouseout="mOut(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Minima possimus cupiditate commodi, rerum nam veritatis nemo vero iste error similique libero consectetur a hic,
+        quis cumque officia cum reprehenderit dolor autem? Itaque, quam commodi officiis quia voluptatum ducimus beatae
+        tenetur id delectus necessitatibus temporibus dolorum expedita repellendus ab sint eius nostrum cupiditate
+        laudantium aliquid eveniet praesentium, quasi optio. Amet placeat maiores eum, cumque ut, laborum unde
+        blanditiis pariatur esse excepturi omnis eaque sint laboriosam dolore earum dolorum ipsam fugit repellat
+        repudiandae in recusandae nisi illo nemo? Dolore aliquam, ex unde cum perspiciatis, consequuntur delectus
+        quibusdam aliquid adipisci nisi modi alias nulla, possimus recusandae quidem voluptates officiis. Alias commodi,
+        molestias ex itaque amet ratione sequi corporis nisi quos doloribus ad, magnam fuga. Repellendus et provident
+        fugiat. Adipisci illo saepe aspernatur consectetur atque hic sit rem ipsum dolore, eius incidunt mollitia
+        repudiandae neque! Inventore nostrum quod sed dignissimos eius non voluptatem explicabo officia libero
+        repudiandae harum recusandae excepturi, perferendis aperiam minima repellendus tenetur, distinctio deleniti
+        eligendi in officiis fugiat! Quas sed voluptas dignissimos magni provident repudiandae minus molestiae omnis
+        aspernatur alias quod eos impedit porro eaque dicta doloribus officia enim recusandae, minima saepe ipsam
+        eligendi quia deleniti dolorem. Provident temporibus est ut doloremque vero ipsum quos maxime incidunt qui
+        facere, molestiae quam modi cupiditate pariatur culpa consequatur magnam molestias saepe sequi. Debitis
+        necessitatibus, repudiandae commodi ad quibusdam ratione perspiciatis facere quod voluptatibus iure laboriosam
+        dolorem eius quam a maxime neque hic dolor id quidem eligendi blanditiis adipisci! Enim porro repellat,
+        dignissimos saepe maxime repellendus dolorum a hic eveniet praesentium itaque ducimus, corrupti in nostrum
+        laborum perferendis iure nobis quos aspernatur ipsum asperiores? Voluptatum corporis voluptatibus facere
+        suscipit impedit reprehenderit repellat quia? Enim doloribus, ratione cumque libero nam doloremque eum deleniti
+        facere veniam voluptate aliquid. Debitis architecto ad tempora ut neque magni suscipit adipisci molestiae amet
+        rerum sint non aliquid omnis quo et nesciunt enim ullam nihil quae, fugiat nam est laudantium id eveniet!
+        Deleniti dicta nihil labore vitae, ipsum culpa. Tempora sint fuga explicabo minus autem eveniet fugiat sapiente
+        architecto ipsam officiis, officia suscipit, ad accusamus assumenda possimus modi incidunt dignissimos. Ex
+        dolor, nisi unde, eum praesentium eveniet excepturi a aliquid consectetur ut beatae harum eaque? Totam
+        perferendis expedita esse quia nobis fuga quasi, quidem dolor deserunt neque earum odio voluptas aperiam. Saepe
+        facere asperiores a sit molestiae nulla error magni fugit ipsam, itaque illum vitae est tempore iure dolor
+        similique eveniet autem at corrupti deserunt perferendis? Fugiat doloribus voluptatum suscipit eveniet dolores
+        similique ut eum perferendis corrupti magnam obcaecati ipsum, omnis optio laudantium eius quod harum sunt in!
+        Eos dolor facere esse quibusdam recusandae repellat et consequatur doloremque eius! Quam quaerat atque quasi?
+        Voluptate aliquid aliquam a fuga, fugit amet autem nesciunt reiciendis consectetur delectus vel obcaecati
+        facilis veniam pariatur, quam officiis incidunt blanditiis velit? Quaerat a eius voluptate quisquam repudiandae.
+        Laborum sunt nemo, consectetur praesentium eligendi itaque qui necessitatibus exercitationem culpa inventore.
+        Ipsa, ducimus esse ab at natus itaque ullam doloribus iure nihil, neque impedit ex optio consequatur recusandae
+        dolores!</div>
+</body>
+
+</html>
+
+5TH PROGRAM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function check(){
+var name=prompt("enter a string")
+var c=(name.length)-3
+if( name.length >=3)
+    return (name.substring(0,3)+name.substring(c))
+else
+    return name
+
+}
+document.write(check())
+</script>
+
+<body>
+    
+</body>
+</html>
